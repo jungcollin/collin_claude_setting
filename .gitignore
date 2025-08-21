@@ -2,9 +2,18 @@
 /*
 
 # 다음 디렉토리만 추적
-!/agents/
-!/hooks/
-!/config/
+!agents/
+!hooks/
+!config/
+!commands/
+
+!agents/*
+!hooks/*
+!config/*
+!commands/*
 
 # .gitignore 파일 자체는 추적 유지
 !.gitignore
+
+!settings.json
+!settings.local.json

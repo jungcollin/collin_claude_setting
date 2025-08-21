@@ -1,0 +1,24 @@
+{
+  "env": {},
+  "permissions": {
+    "allow": [],
+    "deny": []
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -message \\\"Claude Code Finished\\\" -sound default"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); user=$(whoami); dir=$(basename \"$(echo \"$input\" | jq -r '.workspace.current_dir')\"); model=$(echo \"$input\" | jq -r '.model.display_name'); if git rev-parse --git-dir > /dev/null 2>&1; then branch=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null); git_status=\"\"; if [ -n \"$(git status --porcelain 2>/dev/null)\" ]; then git_status=\" ✗\"; fi; git_info=\" ⎇ $branch$git_status\"; else git_info=\"\"; fi; printf \"\\033[1;34m%s\\033[0m \\033[1;32m%s\\033[0m%s \\033[1;36m%s\\033[0m\" \"$user\" \"$dir\" \"$git_info\" \"$model\""
+  }
+}

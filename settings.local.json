@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(for:*)",
+      "Bash(do if ! grep -q \"^---\" \"$file\")",
+      "Bash(then echo \"Missing frontmatter: $file\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(mv:*)",
+      "Bash(claude code doctor)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
