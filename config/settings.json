@@ -1,0 +1,47 @@
+{
+  "codeStyle": {
+    "global": {
+      "comments": "avoid",
+      "maxLineLength": 120,
+      "indentation": "4 spaces",
+      "preferEarlyReturn": true,
+      "functionMaxLines": 20,
+      "importOrder": [
+        "standard library",
+        "framework",
+        "third party",
+        "project"
+      ]
+    },
+    "kotlin": {
+      "naming": {
+        "class": "PascalCase",
+        "function": "camelCase",
+        "constant": "UPPER_SNAKE_CASE",
+        "variable": "camelCase"
+      },
+      "style": {
+        "useDataClass": true,
+        "avoidNullable": true,
+        "preferImmutable": true,
+        "useExpressionBody": "when possible"
+      }
+    },
+    "javascript": {
+      "style": "airbnb",
+      "preferConst": true,
+      "arrowFunctions": true,
+      "destructuring": true
+    },
+    "testing": {
+      "pattern": "Given-When-Then",
+      "coverage": 80,
+      "namingStyle": "descriptive"
+    }
+  },
+  "behavior": {
+    "verbosity": "concise",
+    "explanations": "minimal",
+    "emojis": "never unless requested"
+  }
+}

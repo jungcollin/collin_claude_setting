@@ -1,3 +1,10 @@
-!agents/
-!hooks/
-!config/
+# 모든 파일 무시
+/*
+
+# 다음 디렉토리만 추적
+!/agents/
+!/hooks/
+!/config/
+
+# .gitignore 파일 자체는 추적 유지
+!.gitignore
