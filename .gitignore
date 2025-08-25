@@ -15,5 +15,6 @@
 # .gitignore 파일 자체는 추적 유지
 !.gitignore
 
+!CLAUDE.local.md
 !settings.json
 !settings.local.json
